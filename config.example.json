@@ -1,0 +1,23 @@
+{
+  "hotkey": "CommandOrControl+Shift+Space",
+  "provider": {
+    "kind": "openai",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "api_key": "",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.2,
+    "style": "natural, concise workplace chat"
+  },
+  "glossary": [
+    { "zh": "飞书", "en": "Lark" },
+    { "zh": "联调", "en": "integration testing" }
+  ],
+  "auto_paste": true,
+  "commit_method": "paste",
+  "restore_clipboard": true,
+  "paste_delay_ms": 120,
+  "preview_debounce_ms": 350,
+  "timeout_ms": 8000,
+  "cache_size": 512
+}

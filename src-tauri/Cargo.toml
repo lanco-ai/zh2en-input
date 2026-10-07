@@ -1,0 +1,29 @@
+[package]
+name = "zh2en-input"
+description = "Hotkey popup: type Chinese, press Enter, English lands in the app you were using"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "zh2en_input_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = "2.7.1"
+
+[dependencies]
+arboard = "3.6.1"
+enigo = "0.6.1"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tauri = { version = "2.12.1", features = ["tray-icon"] }
+tauri-plugin-global-shortcut = "2.4.0"
+tauri-plugin-opener = "2.7.0"
+tauri-plugin-single-instance = "2.5.2"
+tracing = "0.1.44"
+tracing-subscriber = "0.3.23"
+zh2en-core = { path = "../crates/zh2en-core" }
+
+[target."cfg(windows)".dependencies]
+windows = { version = "0.62.2", features = ["Win32_UI_WindowsAndMessaging", "Win32_Foundation"] }

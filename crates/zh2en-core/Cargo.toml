@@ -1,0 +1,21 @@
+[package]
+name = "zh2en-core"
+description = "Chinese → English translation core: pluggable providers, cache, glossary, config"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+async-trait = "0.1.92"
+lru = "0.18.5"
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "rustls", "http2", "system-proxy"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+thiserror = "2.0.21"
+tokio = { version = "1.53.2", features = ["time"] }
+tracing = "0.1.44"
+
+[dev-dependencies]
+tempfile = "3.27.0"
+tokio = { version = "1.53.2", features = ["macros", "rt-multi-thread", "time", "test-util"] }
+wiremock = "0.6.5"

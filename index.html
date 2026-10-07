@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zh2en-input</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <textarea
+        id="input"
+        rows="2"
+        placeholder="输入中文，Enter 上屏英文"
+        spellcheck="false"
+        autocomplete="off"
+      ></textarea>
+      <div id="preview" class="preview" aria-live="polite"></div>
+      <footer class="status">
+        <span id="hint">Enter 上屏 · Ctrl+Enter 仅复制 · Shift+Enter 换行 · Esc 取消</span>
+        <span id="meta"></span>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
